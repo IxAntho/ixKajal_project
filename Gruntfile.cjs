@@ -18,8 +18,8 @@ module.exports = function (grunt) {
     // Task to concatenate JavaScript files
     concat: {
       dist: {
-        src: ["src/js/*.js"],
-        dest: "dist/js/script.js",
+        src: ["src/js/app.js", "src/js/main.js"],
+        dest: "dist/js/app.js",
       },
     },
 
@@ -27,7 +27,8 @@ module.exports = function (grunt) {
     uglify: {
       dist: {
         files: {
-          "dist/js/script.min.js": ["dist/js/script.js"],
+          "dist/js/app.min.js": ["dist/js/app.js"],
+          "dist/js/main.min.js": ["dist/js/main.js"],
         },
       },
     },
@@ -35,7 +36,14 @@ module.exports = function (grunt) {
     // Task to copy HTML files to dist directory
     copy: {
       html: {
-        files: [{ expand: true, cwd: "src/", src: ["*.ejs"], dest: "dist/" }],
+        files: [
+          {
+            expand: true,
+            cwd: "src/views/",
+            src: ["**/*.ejs"],
+            dest: "dist/views/",
+          },
+        ],
         options: {
           process: function (content, srcpath) {
             console.log("Copying " + srcpath + " to " + this.dest);
@@ -50,16 +58,6 @@ module.exports = function (grunt) {
             cwd: "src/images/",
             src: ["**"],
             dest: "dist/images/",
-          },
-        ],
-      },
-      bootstrap: {
-        files: [
-          {
-            expand: true,
-            cwd: "node_modules/bootstrap/dist/",
-            src: ["**"],
-            dest: "dist/bootstrap/",
           },
         ],
       },
@@ -87,7 +85,7 @@ module.exports = function (grunt) {
         },
       },
       html: {
-        files: ["src/*.ejs"],
+        files: ["src/views/**/*.ejs"],
         tasks: ["copy:html"],
         options: {
           livereload: true,
