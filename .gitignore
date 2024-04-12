@@ -1,3 +1,31 @@
+# Compiled output
+dist/
+tmp/
+out-tsc/
+bazel-out/
+
+# Node
 node_modules/
+npm-debug.log
+yarn-error.log
+
+# Sass
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
 .DS_Store
 .vscode/
+Thumbs.db
+
+# Miscellaneous
+.env
+.env.*
