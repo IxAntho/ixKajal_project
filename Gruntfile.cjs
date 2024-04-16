@@ -10,7 +10,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          "dist/css/styles.css": "src/scss/styles.scss",
+          "dist/public/css/styles.css": "src/public/scss/styles.scss",
         },
       },
     },
@@ -28,19 +28,18 @@ module.exports = function (grunt) {
       dist: {
         files: {
           "dist/js/app.min.js": ["dist/js/app.js"],
-          "dist/js/main.min.js": ["dist/js/main.js"],
         },
       },
     },
 
-    // Task to copy HTML files to dist directory
+    // Task to copy HTML, CSS, and image files to dist directory
     copy: {
       html: {
         files: [
           {
             expand: true,
             cwd: "src/views/",
-            src: ["**/*.ejs"],
+            src: ["**/**.ejs"],
             dest: "dist/views/",
           },
         ],
@@ -51,13 +50,23 @@ module.exports = function (grunt) {
           },
         },
       },
+      css: {
+        files: [
+          {
+            expand: true,
+            cwd: "dist/public/css/",
+            src: ["**/*.css"],
+            dest: "dist/public/css/",
+          },
+        ],
+      },
       images: {
         files: [
           {
             expand: true,
-            cwd: "src/images/",
+            cwd: "src/public/images/",
             src: ["**"],
-            dest: "dist/images/",
+            dest: "dist/public/images/",
           },
         ],
       },
@@ -71,7 +80,7 @@ module.exports = function (grunt) {
     // Task to watch for file changes and trigger live reloads
     watch: {
       scss: {
-        files: ["src/scss/**/*.scss"],
+        files: ["src/public/scss/**/*.scss"],
         tasks: ["sass"],
         options: {
           livereload: true,
@@ -92,7 +101,7 @@ module.exports = function (grunt) {
         },
       },
       images: {
-        files: ["src/images/**/*"],
+        files: ["src/public/images/**/*"],
         tasks: ["copy:images"],
         options: {
           livereload: true,
