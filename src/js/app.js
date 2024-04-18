@@ -2,17 +2,29 @@ import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
 import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+console.log(`file: ${__filename}, dir: ${__dirname}`);
 
 const app = express();
 const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.set("views", path.join(__dirname, "../views"));
+
 // Serve static files from the 'dist/public' directory
-app.use(express.static(path.join(path.dirname(import.meta.url), "../public")));
+app.use(express.static(path.join(__dirname, "../../dist/public")));
+console.log(`main file: ${path.join(__dirname, "/main.js")}`);
 
 app.get("/", (req, res) => {
-  console.log(path.join(path.dirname(import.meta.url), "../public"));
-  res.render("/Users/anthony/projects/ix_kajal/src/views/index.ejs");
+  res.render("index.ejs");
+});
+
+app.get("/js/app.js", (req, res) => {
+  res.sendFile(path.join(__dirname, "/main.js"));
 });
 
 app.listen(port, () => {

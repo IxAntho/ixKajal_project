@@ -1,2 +1,2 @@
-//Copyright year automatic update logic
-//document.getElementById("copyrightYear").innerHTML = new Date().getFullYear();
+// Copyright year automatic update logic
+document.getElementById("copyrightYear").innerHTML = new Date().getFullYear();
