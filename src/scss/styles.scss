@@ -1,50 +1,30 @@
-// Import Bootstrap Functions
-@import "../../node_modules/bootstrap/scss/functions";
+// Import vendor files and libraries first
+@import "../vendor/normalize.scss";
+// Functions and variables
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
 
-// Import Bootstrap Variables
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/variables-dark";
+// Required Bootstrap imports
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
 
-// Import Bootstrap Maps
-@import "../../node_modules/bootstrap/scss/maps";
+// Required components
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/nav";
 
-// Import Bootstrap Mixins
-@import "../../node_modules/bootstrap/scss/mixins";
+// Import utility functions, mixins, and variables next
+@import "../scss/_variables.scss";
 
-// Import Bootstrap Root
-@import "../../node_modules/bootstrap/scss/root";
+// Import global styles and base styles next
+@import "../scss/_custom.scss";
 
-// Import Bootstrap Utilities
-@import "../../node_modules/bootstrap/scss/utilities";
+// Import layout and module styles
+@import "../scss/_page.scss";
+@import "../scss/_header.scss";
 
-// Import Bootstrap Reboot
-@import "../../node_modules/bootstrap/scss/reboot";
-
-// Import Bootstrap Type
-@import "../../node_modules/bootstrap/scss/type";
-
-// Import Bootstrap Images
-@import "../../node_modules/bootstrap/scss/images";
-
-
-// Import Bootstrap Containers
-@import "../../node_modules/bootstrap/scss/containers";
-
-
-// Import Bootstrap Grid
-@import "../../node_modules/bootstrap/scss/grid";
-
-// Import Bootstrap Helpers
-@import "../../node_modules/bootstrap/scss/helpers";
-
-// Import Bootstrap Utilities API
-@import "../../node_modules/bootstrap/scss/utilities/api";
-
-
-//@import "../../../node_modules/bootstrap/scss/bootstrap";
-// Import Custom Styles
-@import "../scss/custom";
-@import "../scss/page.scss";
-
-// Import Media Queries
-@import "../scss/media-queries";
+// Import state-based styles last
+@import "../scss/_media-queries.scss";

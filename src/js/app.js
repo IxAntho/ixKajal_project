@@ -6,7 +6,6 @@ import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-console.log(`file: ${__filename}, dir: ${__dirname}`);
 
 const app = express();
 const port = 3000;
@@ -17,7 +16,6 @@ app.set("views", path.join(__dirname, "../views"));
 
 // Serve static files from the 'dist/public' directory
 app.use(express.static(path.join(__dirname, "../../dist/public")));
-console.log(`main file: ${path.join(__dirname, "/main.js")}`);
 
 app.get("/", (req, res) => {
   res.render("index.ejs");
