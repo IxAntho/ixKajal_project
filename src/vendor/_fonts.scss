@@ -7,9 +7,25 @@
 }
 
 @font-face {
-  font-family: "Libre Baskerville";
+  font-family: "Sedan";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("./fonts/LibreBaskerville-Regular.ttf") format("woff2");
+  src: url("./fonts/Sedan-Regular.ttf") format("woff2");
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/Raleway-Regular.ttf") format("woff2");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/Montserrat-Regular.ttf") format("woff2");
 }

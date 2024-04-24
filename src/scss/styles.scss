@@ -1,20 +1,20 @@
 // Import vendor files and libraries first
 @import "../vendor/normalize.scss";
 // Functions and variables
-@import "../node_modules/bootstrap/scss/functions";
-@import "../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
 
 // Required Bootstrap imports
-@import "../node_modules/bootstrap/scss/maps";
-@import "../node_modules/bootstrap/scss/mixins";
-@import "../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
 
 // Required components
-@import "../node_modules/bootstrap/scss/utilities";
-@import "../node_modules/bootstrap/scss/reboot";
-@import "../node_modules/bootstrap/scss/containers";
-@import "../node_modules/bootstrap/scss/grid";
-@import "../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/nav";
 
 // Import utility functions, mixins, and variables next
 @import "../scss/_variables.scss";
@@ -25,6 +25,7 @@
 // Import layout and module styles
 @import "../scss/_page.scss";
 @import "../scss/_header.scss";
+@import "../scss/_nav.scss";
 
 // Import state-based styles last
 @import "../scss/_media-queries.scss";
