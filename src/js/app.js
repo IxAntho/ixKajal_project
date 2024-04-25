@@ -4,6 +4,8 @@ import bodyParser from "body-parser";
 import path from "path";
 import { fileURLToPath } from "url";
 
+const booksApiKey = "AIzaSyBQjhmI2UZJSKhR4-leOpTpzlFrpGUdbAM";
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
