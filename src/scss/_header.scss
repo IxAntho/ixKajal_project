@@ -8,6 +8,8 @@
   margin: 25px 0;
   width: 100%;
   max-width: 1440px;
+  height: 100%;
+  max-height: min-content;
 }
 
 .header__heading {
@@ -17,21 +19,3 @@
   color: $txt-primary;
   text-align: center;
 }
-
-// const latinAmericanPoets = [
-//   "Pablo+Neruda",
-//   "Octavio+Paz",
-//   "César+Vallejo",
-//   "Gabriela+Mistral",
-//   "Jorge+Luis+Borges",
-//   "Alfonsina+Storni",
-//   "Juana+de+Ibarbourou",
-//   "Dulce+María+Loynaz",
-//   "Delmira+Agustini",
-//   "Eliseo+Diego",
-//   "Idea+Vilariño",
-//   "Álvaro+Mutis",
-//   "José+Emilio+Pacheco",
-//   "Claribel+Alegría",
-//   "Blanca+Varela",
-// ];

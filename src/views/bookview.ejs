@@ -1,0 +1,39 @@
+<%- include("./partials/header.ejs") %>
+
+<div class="bookview__content">
+  <div class="bookview__image-container">
+    <% if (book.thumbnail !== "Imagen no disponible") { %>
+    <img class="bookview__image" src="<%= book.thumbnail %>" />
+    <% } else {%>
+    <svg
+      class="bd-placeholder-img card-img-top bookview__svg"
+      width="100%"
+      height="225"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="Placeholder: Thumbnail"
+      preserveAspectRatio="xMidYMid slice"
+      focusable="false"
+    >
+      <title>Placeholder</title>
+      <rect width="100%" height="100%" fill="#55595c"></rect>
+      <text
+        x="50%"
+        y="50%"
+        text-anchor="middle"
+        alignment-baseline="middle"
+        fill="#eceeef"
+      >
+        Imagen no disponible
+      </text>
+    </svg>
+    <% } %>
+  </div>
+  <div class="bookview__text">
+    <h1 class="bookview__title"><%= book.title %></h1>
+    <p class="bookview__subtitle"><%= book.subtitle %></p>
+    <p class="bookview__description"><%= book.description %></p>
+  </div>
+</div>
+
+<%- include("./partials/footer.ejs") %>

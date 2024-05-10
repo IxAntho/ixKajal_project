@@ -5,6 +5,8 @@
   flex-direction: column;
   min-width: 320px;
   max-width: 2440px;
+  height: max-content;
+  justify-content: space-evenly;
   background-color: $bg-color ;
   color: $txt-primary;
   -webkit-font-smoothing: antialiased;

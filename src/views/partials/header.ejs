@@ -30,21 +30,21 @@
     <title>Ix Kajal Biblioteca</title>
     <script src="https://kit.fontawesome.com/48f87bed0a.js" crossorigin="anonymous"></script>
   </head>
-  <body class="page">
-    <header class="header" >
+  <body class="<%= currentPage === '/bookview' ? 'bookview__page' : 'page' %>">
+    <header class="<%= currentPage === '/bookview' ? 'bookview__header' : 'header' %>" >
       <nav class="nav" id="nav">
         <ul class="nav__links" id="nav__links">
           <li class="nav__links-item">
-            <a class="nav__link" href="#">Inicio</a>
+            <a class="nav__link" href="/">Inicio</a>
           </li>
           <li class="nav__links-item">
-            <a class="nav__link" href="#">Escritores</a>
+            <a class="nav__link" href="/filosofos">Filósofos</a>
           </li>
           <li class="nav__links-item">
-            <a class="nav__link" href="#">Nosotros</a>
+            <a class="nav__link" href="/nosotros">Nosotros</a>
           </li>
           <li class="nav__links-item">
-            <a class="nav__link" href="#">Contactanos</a>
+            <a class="nav__link" href="/contactanos">Contactanos</a>
           </li>
         </ul>
         <p class="nav__logo">IX KAJAL</p>
@@ -55,6 +55,8 @@
           </button>
         </form>
       </nav>
-      <p class="header__heading">Voces latinoamericanas, un tapiz literario vibrante y cautivador.</p>
+      <% if (typeof showHeading !== 'undefined' && showHeading) { %>
+        <p class="header__heading">Ágora Filosófica: Explorando las Profundidades del Pensamiento.</p>
+      <% } %>
     </header>
 

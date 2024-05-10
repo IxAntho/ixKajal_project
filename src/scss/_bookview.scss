@@ -1,0 +1,107 @@
+@import "./variables";
+
+.bookview__page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  min-width: 320px;
+  max-width: 2440px;
+  background-color: $bg-color ;
+  color: $txt-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  padding: 0 15px;
+}
+
+
+// .bookview__content {
+//   display: grid;
+//   grid-template-columns: max-content 1fr;
+//   grid-template-rows: repeat(3, min-content);
+//   grid-template-areas:
+//     "image title"
+//     "image subtitle"
+//     "image description";
+//   justify-content: center; /* Center the content horizontally */
+//   align-items: start; /* Center the content vertically */
+//   column-gap: 10px;
+// }
+
+.bookview__content {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  width: 100%;
+}
+
+.bookview__image-container {
+  grid-area: image;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 100%;
+  max-height: 400px;
+}
+
+.bookview__image {
+  width: 100%;
+  height: 100%;
+}
+
+.bookview__svg {
+  width: 100%;
+  height: 100%;
+}
+
+.bookview__text {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  row-gap: 5px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.bookview__title {
+  grid-area: title;
+  font-family: $font-family-heading;
+  font-weight: 400;
+  font-size: clamp(22px, 5vw, 34px);
+  line-height: 1.2;
+  text-align: left;
+  color: $txt-primary;
+  align-self: start; /* Align the title to the start (top) */
+  height: min-content; /* Set the height to the minimum required by the content */
+
+}
+
+.bookview__subtitle {
+  grid-area: subtitle;
+  font-family: $font-family-subheading;
+  font-weight: 400;
+  font-size: clamp(18px, 5vw, 24px);
+  line-height: 1.2;
+  text-align: left;
+  color: $txt-primary;
+  align-self: start; /* Align the title to the start (top) */
+  height: min-content; /* Set the height to the minimum required by the content */
+
+}
+
+.bookview__description {
+  grid-area: description;
+  font-family: $font-family-primary;
+  font-weight: 400;
+  font-size: clamp(12px, 5vw, 18px);
+  line-height: 1.2;
+  text-align: left;
+  color: $txt-primary;
+  align-self: start; /* Align the title to the start (top) */
+  height: min-content; /* Set the height to the minimum required by the content */
+}

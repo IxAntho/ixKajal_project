@@ -1,6 +1,8 @@
 .footer {
   width: 100%;
   max-width: 1440px;
+  height: min-content;
+  max-height: 100%;
   display: flex;
   flex-direction: column;
   align-content: center;
