@@ -1,0 +1,287 @@
+<%- include("./partials/header.ejs") %>
+
+<section class="philosophers">
+  <ul class="philosophers__list">
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/Socrates"
+        class="philosophers__link"
+        ><img
+          class="philosophers__image"
+          src="data:image/jpeg;base64,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"
+          alt="Socrates"
+        />
+        Socrates</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://plato.stanford.edu/entries/plato/"
+        class="philosophers__link"
+        ><img
+          class="philosophers__image"
+          src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgWFRYYGRgaHRocHRwcGhwaHB8fGh4eHBoYHhwcIS4lHB4rIRkaJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHhISHjEhISE0NDQxNDQ0MTQ0NDQ0NDQ0NDQ0NDE0MTQ0NTQxNDQ0NDQ0NDQ1PzQ/PzE0NDE0MTExMf/AABEIAPoAyQMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAEBQIDBgEAB//EAD4QAAEDAgQDBgUDAwMDBAMAAAEAAhEDIQQSMUEFUWEicYGRobETMsHR8AZS4RRC8SNicoKSsjRTosIVJDP/xAAZAQADAQEBAAAAAAAAAAAAAAABAgMEAAX/xAAhEQACAgMAAgMBAQAAAAAAAAAAAQIRAyExEkEiMlFhE//aAAwDAQACEQMRAD8AdueJN+nn3KNOpq4npz+UlV1aWW4NwLxvzVzBAGw5d6x0aiAaATBMWMd8yqeJVSGsMWO031Rj38wO6EJioIZI6Dl+fZAAG2uQNvPyXsE97wTZomxnXqu4mm0bAwrcLZjGsbOYmbxlXJHDvhbRnaY/tJtvBAKZkSYGqDwdAsAjUNgu3KOZ1/OStFUhG7OZV1unSLD7rrHczFyF5z+SLOIFoXCyIMgbd0qecE/nkkvHsZkFnAct4/lK3SOW2Q4lxhrJAOYzqkY/UTiSQSb8rd3mkWPxLqj7mMpMRqeqrwcAActe83+qn5NlVFGuwOMrvEAgXPgjxha9+2NZ5eyC4NUaANFoBUBUvNjuC/BIcQ5j4e06fPt58k4pV5AMi6prNaRDrjqldKab8jTIvG5AnTruqwyboSWOlaHZc10g2Nj9lIOvEzbvUabgRaD4QpUm9omLmw7grkS9rpsVF1TrYean8Pqq307gTIhccTpdoXXcOzKXd8qth25Quv8AEyYK44JDgdIUs3chgI27vzdc+IeXouOM8XbHu8dwrnv0Efg3QrbG/X1VjnzEHQX8bKJQvqh0G0lLuMYjKGBoBkGxn6BG/G1BMXS7i+Ymm0avOVvib+gQZ0VsorAii15AzPcYFzDdj1RHBK5Dgwt1zG4IBk39gp8ZgOYwaMAB+yJ4WyS2ebvKy6B0jR4cmO1F9lYQVCLfmikCYAm/P6qxI4GXUSb3XJM6rrBIvf8AjVcEk94AsPosL+p60w2bky7p+aLdYmAOZhfNf1FUh4nnY7TOvcFKfRodFwYZPeLoqjo0RtM8zo4d0iVbhmS2GQSBd0z/AAFzDvgObaxdHnf1SPSLIPw5c0jKReLAc1qcOw5RmHfp5rLkkAOaJPLqVzH8crMa1mUBxvJvbkp+NlG6NM94EzPKdfVJcZUh83N8vXn9Vfhsa80Hvc2XNg2t6JLjeMNqNADHB4eJ5EjUz3QjFNM6XDcYV4DZHLkiGGCNtNUu4fVlg8AmBb8v3WtO0ZGWiT5qeXyUG3m3iFNpjn3ogImwsuOZbSVJzlF599VwTzW8591KOhUQ6SpZui4Bjwy+l+ak94HzGLwOaIq17mGzHmhqoDndNdLjRRKEq1Qdkg7wO8oagzNiGtM9jtE63OgRLMKBpprPh16Jbw3Exmd+9xJO8aCPBLLg8FsaY+gHvLm+R90RwyiWPAc6QQbz4x6KpoLwf7GRrue6dlOk0dn4ZMjY3k6WKWEmmGcE0O3VSQYFu/aPdXSuMNjNj9enkuOpiJ139FqZmRW948VKmDc2gqqY0vsp/EMTHh9UAgfE8cWmG2G892gWB41UzvkkRfXTXXqtVxvFNGYmwYCJO5IkxzWKDs8vOjRZqjLbKRVIubiHBpE22Hyt6WUKbodqSNBt1ke6Wte5z773M6QdAmzcLOhOtptfdBodGn4Q9k5HjbU21VuL4cwEEOLhOnLxSzDN0naNbd902+dh/taJ31PfyCnsrarZ3hYnOzYsI+yTY/DgZGgiS7fkNVPh7arKpa6q1gAuQMx1iylxjCuY9r82YDs20JnXpKKWxW1Q9wYLXtaRyEa9x9IT1rI9VneGV8zgYuGi/wCd/qtC3UT+StEOEJLZNjPyVZHRdYF0JhCGXpZcLNlN2u0LhsuOBnMj+FLL09SpvOvNV/DHVcEzGJeyAbTpIdrF5Ki5k9oHW38EbJLU4kztREwIgWEE9k9Yi4R9KuxzPm0Mk6DSEqprfRnoJxDy1jydmkDx7IPqlNFoEjYAfyjOJPBY0Dci3/GTPmVRhqBIjwUpMrBDnAsL2yRLQLDQIejxEPq/CEgtMaaeXP6KzHcRbQoEbxAHM8kD+j2doPJk1GF897iAlhG2GcqRrach2skTrpOyk+reJ01jraFKiwCRJvfmepVdRokgNJkfVajKiJm8D85KMk2EAc/4XHutpJ5DYJfxfGtYwDMAXAgJfQxneNlkuzuLpJDQdXbkxsNVlq+KuRIgtOm3TvRfHKmZ8kkiYncQPbRJHBzogb6fdKo2UukMuHGXEn+0COvKFoMJZubc+l/RJcEwtgb3JtbTQK/DYmDlm0kRyvMHqUj6Mh40SQ505Rpa2t/HRV46q+o4U2yNLAx+SiWVgadjbNI79T4WKIwVMB5edT7JTrF+K4PXLf7I3hxzX3V1Co59CoHDM5oaIGtrSPBOaT87iBIbEGUEWhj8wMbHvi3oidZ3AMlhMkaARrsdFpeHOc4dq5EXWWwNR1+zLSS4EaiT/MrW4N4yi/LfX+U0BJJhoA/PddleC452iqTOOfoPVczeS5lsTzXaen3XHESROi9lUndBKj4FcE+V18CTG5nx7+SorVi1sWLf22IjS/VaVjOzI1t1SPHUhJga67XmfooKVmhxovwDWnLaAALcide7kndJlxkGsQEgoDK+Btb7lbPhTMzQbW0SSGT0fPeN4t9R7s1spLQOUa352Wt/R9qdPWTRFv8Aqgeiz/6g4e747xFnHMNh2hJ+qf8A6U+Wm0DSgJ11zkX5aK0PRCezVtPp9FTXeBMfkc5UcRiWU2F73ANEXnU8hzKyGM40+u4hsspDRo+d3UnbuVSaQ/q8WY2Rmg8hp4r5/wAS/VjnvzimB/acxk2JmI5iPJaF2GtfU/krD4/BhlUsJDQ7Rzrw4aGdgUfFewvQwfh3PcTJE6kHnoEdQwbWab6ncobhWLcCaFUQ9th4Xyz4SDunFSLQJlGkloZO0Ln0g12aYyumed4IAUMAM5c6IzG1hMa+F0SaJeSTYAj8hX/KcjGgQAXP37RzQPOeShJUPYRgtWNOkOMbS28ecJoyqLXmBJPP/CAosL3DICcpN+ZPtupPljwAQQGgE7byPHRIcNOHVQWzN9F3EsDpETmkdWuEQe66A4O+b3uTA/OiYU3w+CPmI/j2QO9hlLCgAN5ep3KIfQEXa1xixhXYUEyTsrQ6SJCBRg2HrvbYzA80ezE6E90/dQrU5AtH1VVCmC0j88k0ZNCSjFqw9jv4Vb3XtzHQIOjULDDvl9kWXg3/AJVk0yTTXSJeQbhU/wBa3kUQ650Q/wAPu8kQCClg3NEHzQNXAnOSRYX6InAYx73Fjhpa6oxPE2Q7LNpCybs2aFLrVH9THpp7rWcCqWA5BY/BuzAOO5PodfZavgkyAI0t9UZCegL9X4aIeOrT43Hlde/ScnIdzREzrd5g+QCb8bwvxGPb08ehSLAucykwAxlZkIgczqeSpiTeiUwLjOK+M8iewwkMG0zBdyve6nw7Bgdom6PweFb+0eQn8uj3UKeTM5gF4kW8lpJgLqMDTZIeOYLOPlF237wdVpMQRFnTrqkmLqloDeRiB1MhMcZVlTO0U6hIc2Qyr/c2P7HEatuPApnguL3DKrcj9Gu1Y7bXQSuYjh2eQJa8Xaeo1BjUIWjWJcWFsbOaeuttwLpXoXcTQsYALWBKpeO2TppHW26pNUUXhnz03fKZzOb39Ew+G10ubeD3WHTdCSUh1JF+DGQtabtdN+pn2Vv9O0m5O9+rJId3beK5gKDjVdv2TB5Wv9ky+AR3WEd38wprHuxrEdFxbmANh2o/NE0fWIqUZEkAknnI+kwgeKltIl7raCDq7uCD4bxB1UZyC0M7LQTOk5j4kpJxrY8KcqN7hXAsnmr5CEwB/wBNvcFYXqQ7Wyyq9coHp4FQo3InREvYNgiK9FZZYk7+yDqMc0y0y3kdLo14QmIqtaJcYAsuujuhGGxEkg2P7d1dnHRZnFcZYXZGsJuAHAwQSYBCL/qav+z/ALVaM3RKUNg9FgYXHctsfDTvWe4gxuWBla551PXU9OS0VUS3rssnxGm7Oc2gsPsoQ2zRJ0i7BNAY2OvvC0fBn3B8Egp08rGxuCb7X2TThdSD5IyAjTPEttukvG8KA3OQSQBMcu5N8M6QOl/NcxtEOBHMRH0QhJxdiyVqhEymwtEEg6mDMW1U6lRzAGO7TdnDr0S2Cx5j5mmHdQeib1qmdgGhFwtqdqzOmB1oJ7xIKQ8Sc74rW7E5r8pgD3806qVBlF7NN9Trss/jnziGDkPY2TBCaDg2qJ5nTqNPJS4rge2HshryYnUQRuN+9CMqBr29T9StJVoh7BzhE5ozbM7BBZlmQXNPZdyPRLW457XWkNE3Du2Np8e5a+i3+w31PSfsUr44aeR0MZnccubll+Z30StJCeNBPBeKvykuBe4DeA4tOxjU2mULxf8AVby4sYMg+WGwXlx/3XDe8LPYem55LmucGsIbAdqJ25Wm607/ANIUPnl8a3frawsglZybM9xEvJzPeS4j5WEud0zPMx4LQ8Jwvw6DQfmv5mS4+ZhCY+gxgZTYA0FwFvqnTmw0DkPcSo5nVI1YI9ZocG4ZGdw9laJJA2QWErt+E09I8rIjhVYuLp2ghZyrQwpNI8VM1oF9EPVrjbZDvdNkbJ+N9CKlYuMNsEt4lhYAc7td59PJM8MzdAcdqZWOdrlBIHMj5R5wjGLk6A5KJnsPRyOc/MBBIbOkkWEnfZFfFfzZ5n7ILDPZkAdncfnIMRmIubb3U/6pnM+i3xSiqMcnKTscVB36+iVYulPXX/KaG/iJQtr89l5sXR6DVit1RxaxjmwWyLclfhHwdfwKrjJyBlTQBwa49HAtnzheYbztsne0ItaNJgK94RtWpO9kkwT4IMwi6rxlkHr5paGEuOb/AKjzPI//AB97JpgiOyTHaE35ESlJgueRF3+whEsccjBN2kt8Abe61w4Y7+TIYim2Htbu0nxWYw7waonWL+MlaCuXOqROro7rBZajJquM6k36AwqoYKxVMy2Ldpa7DPljYIJ6bCJ0WabSBYdSZv8AngE34K/MzKLEWPeNkTi3Gs7Be07X6LJY51Rx1gEEC2/U8ov4LathryDdplQxPDmNbJAIOh17rrqTOZi6BYxzqWaJZE/8RLj3/dbX+oJY3XQewQY4PTc5r8kkGZmx5fnRG1MKbyfJLVCpCDEsLqlMn959k4rtuUsac1djQbMzW6pviTqs2bpsw/U5SILIn5S76JjwYAMedO0B4ASUnwBJzAmAd9fyybUHgMP7Wiw68z1USkuBrbmyvZTuFVQuBCYUgikTk6LKTLJZxXDh+Vh+Uuv9E1CBx+IDG5+Ux1Ow81WEvGVshJWqMxxV4c/JTaBl+Y9Y+iC/ozyHkj8JhiSXPMTJcdzNzKYTS/8Adb5BGUnJ2NGKiqKWPJi2g70O9zRuAeXefshqdWSe0Q4bDTwUKdJrnNh/ZPaI3kbTyUPEtZ7jgD6FRg/bPXs3Wd4RxQOaGPdDotOh8ea1NfHMEtEOJkQ3QA6ydF88fRglrpDgYtpyvy71XGrVMlN07Nxhq5B7rK99e283PksvgOI/CbDw4jnqR06p9RxbHlrWOBJAnYwb6eC7x2DzVBeEpQ1k6xfvNz7K+u0ilIntPch8TUyuHIB2nOJRuPdlZTZsGy7pO60R/TOu2JMbishe4mIsO8pJw9wJMaAkA+MrnHqzjVa0/KDnHIkiJXOEHs6b38bpouyjVDPDAQZtuRO5THhdXK8t3Nx3Hmg8MQcwuO0PD8hcqvyVGuvGk9JTANLUpz0nkhjnaI1H7du8I6m6w3gfhUXUwbx9fJA441j3NEkCNkNXflBJPlr3I6raBokXETqQbN06lccL8BW//YG5dmKdl3Zd5LK0iWVmPvEkc++Fpc48xPqsubppxPR3DtgW3kooy1gH7nIWewPwq2tV+RvT3UirHeGNh3JlgzM30Sqm8CEwwD7uCMekpcDHhZ7jT5c1n7SfUXK0bjZZTjTT8Z3dI6pmhI9K8ORMSRaPNWfBZ+xqVfFdmmSDop5j+4eYXUxtAmOqltRzhy9dAhhRe8BrdBqdpN/FMmYNgMvJce+0/VEvgRlgNNo0GmwQcgpMWsweW7rmeVv5S+qxratSWghzQ8A8xy8YTjE5gG8jI9ZBS7ijgSx39suYT/yuJ8U0LYmRKhbiHhzTMTaY/tkfdXfphnae4wAAG9dJJnuQGIcGsdmgOzEwPVN+EyzDgaEkxPXX86KiMzD3vDntvaQP+532C5xDFZnEA3mPBAOxGXKNYlx747I8T7KvDm19bldKVKiuGNsA/UQhzHRq2PIrnCn2LYuDPgQER+oKZLGOGxAPjdLuFHtET18tAjieh8i2P6rgC4jQgHyP8qupVzBpEHbzVhAc0HlqPfwVJp5HRsIcOokfdWJmo4LiQ9kT8tvJGsM95MfykXBXhlR7eYEJ+XgH1XAOVB/adZ9EkxjM3ZbaT6DVNK783O3mhadPMHHp4jcrjjPYhoziPlbN+c3+iZUXFzT0PolPFHhrg0akz4BGtflLXC5sT4hRzLhfE+oMe7s2MAEDSbFcZU/1AHcgFXWqi2QBziBLZuL2J6TZLKWIc9uciCC5hAmOySLeUKKi2UlkjE22HIMaeHrKY4bsunzWW4Viz2QdIWjY+RZLdHNWhqXSLLNfqQw9pNgWx4g6J1RqQucRwbKzCx1pMgjUFMnZOqMRngqMnn6KWPwb6Lwx8dHAzI5ofN0d5qiBYxFiQ7w68lZQ7THA7XHgqHG8ON26fYKzDVe0ZaYmCToSdQO6Qs7RWwbiuJy02usYc4Dy9bIHB0/i4cjQ6nnm1BhVfqJ/YY0H+6pbltPoUBwjFlhcNQRBjUciOq1Yo/GyE3bK6GGfVqAuiIDnmYbreAdFbxDiWZ4bSEtaQ0QZ856I6iKT3w5oNmzr2j/uixCZUwxrS1rGNmbtEeM85TuJPx2JWgtgE31NrT/hFMZIEcpCDqC/v3o7CmWAz+DVZ2zTBJcLMfhS/DuDbugEd4WMZUIN7QfZfQuD9twZOpj+Ur/U/wCnSB/UMaLOy1Wjno18dd/NHFLdHZY6tFWBqnKAfmgDo4bGdJU8SyR2TcD0HNcZTDWhg2F/HS/P6KjEUgMsSCbD6nuWszhuAxYD2HdwGuk6ELXtpnNmt2hHS23RYUiKbHalj9hexlbPCYwfCHN1vE7oM4m+nIMH8nZQpt7MCA2SSe4XR5pQLiYER9UsxtXsCi25PzEWGXUrgGaxVEvrF5027l6i8Fpg3aSPAr3EcaCQynziw1O4CK//ABZpsJIIc655jpG5jVTytVstjTvQDwt4FevscjB1tf8Ale4eBlfBn/Udqds0k+aV1eG1K2IexhADcheSSAARDTAubhH8IpCmKjC7NleRMG5IB+qSKJZOh1Cvlfk27WUjYzeVosBWsLrMYL5p3kg25i2q0WGoA9phyutLTp/ClNbL4X8dj5jgYkIhsDdK6NeLOEFHMdKSxmijivDmVmEOEOF2uGzhfbUGIWW+DX/YP+4/ZbHORoo5VSMlQniZulh2vcC4b68lccO1jrtJ3m59tFNlRrQBAdm1/NlYGZXdlzmEibns9LpGyguxfDMPiQQ1wa9s5b2M3MgrLMwBoPex9i3Q7HqPZazH4dj3ZXg06g0ew68j1SDilSoXNZVDCacODw2HuB0E8j9FoxSfCMkD0QWknoFdhagEz1N9kI55eXZSe/bqrRimuhuWfuPorEy7HUpPZvnGYdCPvZTwLhkcOR9117xltEgtM78o/OS7gtXDmD6aLLNUzRjd0F8KfkrDv91rarAKrmPEsqAEiOdj4rICQQQFr3Q+mx4FwIPn91O62PL+mR4jw40ahpvkgnM13Nux79lR8KXF+2je4fytpjuHCvTyn52XaefTxWVykNy3a4EAjfVbIT8kZZLxdC6vQiWTGYyO+IhHcExfw2A1CQGkhs6mN4XalIEkkyQ4wOQlTpcMD7ta575sTcDpdNa9gJ4r9SOIhgJnoQIJ5nuQeLxlSpLKTC3NbsmXHaByCd4f9MOcZqPygbC589k9wuCp0hDG33dq4+KlLLGPBoxsTcG/TwpBr3gF/wDa3UM+5RHHAMo7k5dZs7pDxB+Zyyyk5O2XgvwyDa5Ziq3bDAWU5cRJAANmj9xNlZw9zi6pm17O0E9mZ6Gypxj3jEPyZQXtYCTsAXCRyMkKNN72OqT2nEt3kXBBMnlK0R4ZsvWEOrgOB0gie4215XWowbcwnf76LGY8w0k2k6bRHqE04BisrR2yQdDNgbSEJRcuD4ZVo1tJuzu1qr2sI+QyORQ9DEB1jY90SjGWPfuoNV0vf4QbiO1lIujM45BC1eSj8M/uXHUZSlhQ43e/NsRAv4gyiald7P8ATBzsLQW5uy8c4dpYhTxjQ05gY3nqqcS/5SNJBH/UJI7pnzRvYBXj+J1Cx7HM7WgcHXbvmiJNuu/RIq1Z7j2iSY9tE/4qwCo0z8wB9Y/jxVFbCS2WQCZ/zOy2RSpNGeTdibM8DswOd59FbgmNEHOAbz47RtzXqmHIde0H05qePwnYLwDDYvpI5+6YAS6swFrGkkSZMW2AA5yVKlVykcwY8NEExggEamCjXUYg+BWebtloaHDDNlpOCP7DmHXUeP8AKy+DfIEbD2Tzh78rpkKDLPaHdF0EJXx7hzXPzyQNDHdZG1naEb3RAyvYWHeQD15poyceE3G9sTYPC0GEFxk7pnSxjf7GrODDvDyzKSQY/laDC4WplEtDffyXOUmM4xRe+oTbc6q6m0NEnZRDWsuTPuqMRiS6wsEvAd4QxuIBFjYJG8ntHfbxTLEMmBsEvxjdGt1JCBSKpGQ40xprQ9pd/pgtDZmZtptz6KVGllebQMjJgRHM5ZsFfxb/ANW0BwbFOA4i1nQd+qHrtzVXNzhwNNhc4WzEE9laI8Rjyr5MG4ri2v7IkjpcWt9FZwOtYs0M5m/UeypxDJtEbyPpCBY9wJyTINuYjdOhYs+mcMfmbETAFpvreO4Sj2vI1O8eHULC8K4yQYcCHWuPlOvkei1rMUXNDniBoHi4Peukk+loyfoaWgn1F0NlH+9C4fGAGxBE+COzu/Afspf5IfyAHYcGZ00P3CUY+mWEM2BJB6cwnOeLd353qOLAcLxIuOQ6KClTGoznESCym4ahzm+kiVTRqEx36e/gmXFqZLKbSAJLtOcapNhjpsR135rdj+iM8lsLa9ruw/TnrHKFRiWFjHNJkOBy220XqQ1Mz3/RQxOJBaQQCCLA8+kJnwCB2U4ygaCPaEe+nLVU9lgecegR2HZmZ+bFZWy6QLgXlruXL6rS4EggfniszWaGulPuDV53mfolkvY8X6Hj5Lcvkh2ViDuqauKh8BXPAPaFuaQatBbMWZBAvGu/mrH1XO3QTYRbBay4VpFbxG5UXBXgc/zqqXm+q45Mi+Y1S4jtOedGCB1cUe87eCX8ROUBg6knqfsuGRmMc+n/AFLfjOAp/DdM3BOcFrY52Qj8Ux1Vzqfy5ABAjfXor+K8P+NVa3NlhjnTEzBaP/sgX4T4VR7A6ZYDJtutEapGPL9mV4jUAEwP8oOo8CTzJRr9CeQjx09U+/TvBW5RUeyXG4zXy+H7kZS8UCEXJgvAODVHEOe2GkNcOZkDb6rcYGGgtOynSYB4gegVNd4DCVmlPyZrjFRVAXEmtJZlEEvaTtZva8rBX/Ed+70QWDfnqSTYWHdEz4q6R+0eZW3BD47MmbJUtFreYvKhWfoNlysCBYXQ1apA7hc+6w1ZqsWcZxXbpgH5Q5xHUwIS3EOAMoY187y8g3J8vyFex5kh29gvRhGopGeT2QbWmADaPdWilmexn7nAD3KEcQ10TpcQJMHRM+BEOxLSYIY0nxNh4xddLgLL6tIB0ftn3hewTySRoDB+6M4zGd0WkA8vm/wlzTDh5fZYzQn7J4jDdqPH/KngKpY4DS9vqFNtYOM26qGLadJFp09F3RubHtZuY5xuicI+0kyFmcHxEsOR+n56o4YvLdpN+lvNTaodOx65sd3siKNQDkluB4hnsdkaAAPquA0G4jTTVAuvsjcOQ8ZXbKjE12sBDLk287LqFT9A1F0FztQ0QD1Op8EpxjyTJTuuzKwMGwv1OpKRYzERoL8lw8f0W1f/AOzYIByPH/iY66JdjCDWedvht1/5XR1RpZVa/KSIcDGvbAiJtaPVB49nxDmY17S5paQ9lpBmxBV4vhkyxbkwfBYM1nloMNbBMXPcLrbYZpYGsFpue7YJDwSuxjWsyOz21bEmLynwrQS51yYhSnJtlscVFBj6pDZ5T9PukfFsackDV1hfXc+CYV6sx4lZfE4gPqE7NBA8N0sY2x5SpDnAsdlMOLdNBraddkbk/wBzkCyqGktcbQ3UxrEXXv60dF6WP6o86f2YfUPkk/HHH4Tmt1i/doU6P3STFfLU7vqvPh9ja+CCkCHDaBEeF/oi2v5FUU9+8ohu3gt6M5TUJnXu/wAp9+n6PadOpEjplMed0lb87e4rQ/pr5z/wP/kEsuHEuMtOZs37JAkaQZPulj5sY3HktBxnRne72SY/J4hZX00w+qKXUy10g6oxzQYMX0Q+L28EVhtPH7JWMuizirHiGwOdh5IRlWoCIPmE/wCLDss8UvOiK4DjOsqPsSwjqE3wHE47L/a6FZoPFRxOiDQ5pqVdggtc2O/RAOrtLjUPyh3Y/wBx0BjkEowTQSJE2KYM+bwScAukMZi3O0ae8216KbcMMhMa9N1PivyjvRrvkb4ey4fgjZTOY/m3sqGOk3tsUyq/dLXalFAkSwuRryXage2kKOLxjnOtZer/AHVD9B3H3RoUpxeMJaGj5RPiddULSjMc0Cxje5FrcphdxOo8VQ/XwKdE30eY2oCIygZvYax1Qvxnfu9Ao4/5W/8AI+yU5jzWtcMUun//2Q=="
+          alt="Plato"
+        />
+        Plato</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/Aristotle"
+        class="philosophers__link"
+        ><img class="philosophers__image" src="aristotle.jpg" alt="Aristotle" />
+        Aristotle</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/Confucius"
+        class="philosophers__link"
+        ><img class="philosophers__image" src="confucius.jpg" alt="Confucius" />
+        Confucius</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a href="https://en.wikipedia.org/wiki/Laozi" class="philosophers__link"
+        ><img class="philosophers__image" src="lao-tzu.jpg" alt="Lao Tzu" /> Lao
+        Tzu</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/Zeno_of_Citium"
+        class="philosophers__link"
+        ><img
+          class="philosophers__image"
+          src="zeno-of-citium.jpg"
+          alt="Zeno of Citium"
+        />
+        Zeno of Citium</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/Epicurus"
+        class="philosophers__link"
+        ><img class="philosophers__image" src="epicurus.jpg" alt="Epicurus" />
+        Epicurus</a
+      >
+    </li>
+    <!-- hola  -->
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/Seneca_the_Younger"
+        class="philosophers__link"
+        ><img class="philosophers__image" src="seneca.jpg" alt="Seneca" />
+        Seneca</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/Marcus_Aurelius"
+        class="philosophers__link"
+        ><img
+          class="philosophers__image"
+          src="marcus-aurelius.jpg"
+          alt="Marcus Aurelius"
+        />
+        Marcus Aurelius</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/Augustine_of_Hippo"
+        class="philosophers__link"
+        ><img
+          class="philosophers__image"
+          src="augustine-of-hippo.jpg"
+          alt="Augustine of Hippo"
+        />
+        Augustine of Hippo</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/Thomas_Aquinas"
+        class="philosophers__link"
+        ><img
+          class="philosophers__image"
+          src="thomas-aquinas.jpg"
+          alt="Thomas Aquinas"
+        />
+        Thomas Aquinas</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/Ren%C3%A9_Descartes"
+        class="philosophers__link"
+        ><img
+          class="philosophers__image"
+          src="rene-descartes.jpg"
+          alt="René Descartes"
+        />
+        René Descartes</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/Baruch_Spinoza"
+        class="philosophers__link"
+        ><img
+          class="philosophers__image"
+          src="baruch-spinoza.jpg"
+          alt="Baruch Spinoza"
+        />
+        Baruch Spinoza</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/John_Locke"
+        class="philosophers__link"
+        ><img
+          class="philosophers__image"
+          src="john-locke.jpg"
+          alt="John Locke"
+        />
+        John Locke</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/David_Hume"
+        class="philosophers__link"
+        ><img
+          class="philosophers__image"
+          src="david-hume.jpg"
+          alt="David Hume"
+        />
+        David Hume</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/Immanuel_Kant"
+        class="philosophers__link"
+        ><img
+          class="philosophers__image"
+          src="immanuel-kant.jpg"
+          alt="Immanuel Kant"
+        />
+        Immanuel Kant</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/Georg_Wilhelm_Friedrich_Hegel"
+        class="philosophers__link"
+        ><img
+          class="philosophers__image"
+          src="georg-wilhelm-friedrich-hegel.jpg"
+          alt="Georg Wilhelm Friedrich Hegel"
+        />
+        Georg Wilhelm Friedrich Hegel</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/Arthur_Schopenhauer"
+        class="philosophers__link"
+        ><img
+          class="philosophers__image"
+          src="arthur-schopenhauer.jpg"
+          alt="Arthur Schopenhauer"
+        />
+        Arthur Schopenhauer</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/S%C3%B8ren_Kierkegaard"
+        class="philosophers__link"
+        ><img
+          class="philosophers__image"
+          src="soren-kierkegaard.jpg"
+          alt="Søren Kierkegaard"
+        />
+        Søren Kierkegaard</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/Friedrich_Nietzsche"
+        class="philosophers__link"
+        ><img
+          class="philosophers__image"
+          src="friedrich-nietzsche.jpg"
+          alt="Friedrich Nietzsche"
+        />
+        Friedrich Nietzsche</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/Henri_Bergson"
+        class="philosophers__link"
+        ><img
+          class="philosophers__image"
+          src="henri-bergson.jpg"
+          alt="Henri Bergson"
+        />
+        Henri Bergson</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/Martin_Heidegger"
+        class="philosophers__link"
+        ><img
+          class="philosophers__image"
+          src="martin-heidegger.jpg"
+          alt="Martin Heidegger"
+        />
+        Martin Heidegger</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/Jean-Paul_Sartre"
+        class="philosophers__link"
+        ><img
+          class="philosophers__image"
+          src="jean-paul-sartre.jpg"
+          alt="Jean-Paul Sartre"
+        />
+        Jean-Paul Sartre</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/Simone_de_Beauvoir"
+        class="philosophers__link"
+        ><img
+          class="philosophers__image"
+          src="simone-de-beauvoir.jpg"
+          alt="Simone de Beauvoir"
+        />
+        Simone de Beauvoir</a
+      >
+    </li>
+    <li class="philosophers__item">
+      <a
+        href="https://en.wikipedia.org/wiki/Michel_Foucault"
+        class="philosophers__link"
+        ><img
+          class="philosophers__image"
+          src="michel-foucault.jpg"
+          alt="Michel Foucault"
+        />
+        Michel Foucault</a
+      >
+    </li>
+  </ul>
+</section>
+
+<%- include("./partials/footer.ejs") %>

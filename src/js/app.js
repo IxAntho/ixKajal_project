@@ -86,7 +86,7 @@ app.get("/bookview", (req, res) => {
 
 app.get("/filosofos", (req, res) => {
   const currentRoute = req.path;
-  res.render("filosofos.ejs", {
+  res.render("philosophers.ejs", {
     showHeading: false,
     currentPage: currentRoute,
   });
@@ -95,13 +95,7 @@ app.get("/filosofos", (req, res) => {
 // Route handler for the nosotros page
 app.get("/nosotros", (req, res) => {
   const currentRoute = req.path;
-  res.render("nosotros.ejs", { showHeading: false, currentPage: currentRoute });
-});
-
-// Route handler for the contacto page
-app.get("/contacto", (req, res) => {
-  const currentRoute = req.path;
-  res.render("contacto.ejs", { showHeading: false, currentPage: currentRoute });
+  res.render("about.ejs", { showHeading: false, currentPage: currentRoute });
 });
 
 // Start the server and listen on the specified port

@@ -18,20 +18,6 @@
   padding: 0 15px;
 }
 
-
-// .bookview__content {
-//   display: grid;
-//   grid-template-columns: max-content 1fr;
-//   grid-template-rows: repeat(3, min-content);
-//   grid-template-areas:
-//     "image title"
-//     "image subtitle"
-//     "image description";
-//   justify-content: center; /* Center the content horizontally */
-//   align-items: start; /* Center the content vertically */
-//   column-gap: 10px;
-// }
-
 .bookview__content {
   display: flex;
   justify-content: center;
